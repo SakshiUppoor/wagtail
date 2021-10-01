@@ -19,6 +19,7 @@ Other features
  * Added "Extending Wagtail" section to documentation (Matt Westcott)
  * Introduced :doc:`template components </extending/template_components>`, a standard mechanism for renderable objects in the admin (Matt Westcott)
  * Support ``min_num`` / ``max_num`` options on ListBlock (Matt Westcott)
+ * Implemented automatic tree synchronisation for :doc:`contrib.simple_translation </reference/contrib/simple_translation>` (Mitchel Cabuloy)
  * Added a `background_position_style` property to renditions. This can be used to crop images using its focal point in the browser. See :ref:`rendition_background_position_style` (Karl Hobley)
  * Added a distinct ``wagtail.copy_for_translation`` log action type (Karl Hobley)
  * Add a debug logger around image rendition generation (Jake Howard)
@@ -37,6 +38,12 @@ Other features
  * Added ``ExcelDateFormatter`` to ``wagtail.admin.views.mixins`` so that dates in Excel exports will appear in the locale's ``SHORT_DATETIME_FORMAT`` (Andrew Stone)
  * Add TIDAL support to the list of oEmbed providers (Wout De Puysseleir)
  * Add ``label_format`` attribute to customise the label shown for a collapsed StructBlock (Matt Westcott)
+ * User Group permissions editing in the admin will now show all custom object permissions in one row instead of a separate table (Kamil Marut)
+ * Create ``ImageFileMixin`` to extract shared file handling methods from ``AbstractImage`` and ``AbstractRendition`` (Fabien Le Frapper)
+ * Add ``before_delete_page`` and ``register_permissions`` examples to Hooks documentation (Jane Liu, Daniel Fairhead)
+ * Add clarity to modeladmin template override behaviour in the documentation (Joe Howard, Dan Swain)
+ * Add section about CSV exports to security documentation (Matt Westcott)
+ * Add initial support for Django 4.0 deprecations (Matt Westcott, Jochen Wersdörfer)
 
 Bug fixes
 ~~~~~~~~~
@@ -47,7 +54,7 @@ Bug fixes
  * Remove redundant 'clear' button from site root page chooser (Matt Westcott)
  * Make ModelAdmin IndexView keyboard-navigable (Saptak Sengupta)
  * Prevent error on refreshing page previews when multiple preview tabs are open (Alex Tomkins)
- * Multiple accessibility fixes for Windows high contrast mode; Admin fields, Icon visibility, Page Editor field panels, sidebar menu, sidebar hamburger icon (Dmitrii Faiazov, Chakita Muttaraju, Onkar Apte, Desai Akshata, LB (Ben Johnston), Amy Chan, Dan Braghis)
+ * Multiple accessibility fixes for Windows high contrast mode; Admin fields, Dropdown button, Icon visibility, Page Editor field panels, sidebar menu, sidebar hamburger icon (Dmitrii Faiazov, Chakita Muttaraju, Onkar Apte, Desai Akshata, LB (Ben Johnston), Amy Chan, Dan Braghis)
  * Menu sidebar hamburger icon on smaller viewports now correctly indicates it is a button to screen readers and can be accessed via keyboard (Amy Chan, Dan Braghis)
  * ``blocks.MultipleChoiceBlock``, ``forms.CheckboxSelectMultiple`` and ``ArrayField`` checkboxes will now stack instead of display inline to align with all other checkboxes fields (Seb Brown)
  * Screen readers can now access login screen field labels (Amy Chan)

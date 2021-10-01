@@ -540,6 +540,10 @@ Contributors
 * Nick Moreton
 * Bryan Williams
 * Wout De Puysseleir
+* Kamil Marut
+* Jane Liu
+* Joe Howard
+* Jochen Wersdörfer
 
 Translators
 ===========
